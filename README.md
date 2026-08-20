@@ -155,6 +155,104 @@ The model achieved an accuracy of **96.67%** on the test dataset, demonstrating 
 
 ---
 
+---
+
+# Task 4 — Sales Prediction Using Python 📈
+
+## Project Overview
+
+This project uses Machine Learning to predict product sales based on advertising expenditure across three platforms:
+
+- TV
+- Radio
+- Newspaper
+
+The target variable is **Sales**.
+
+## Objective
+
+The objective is to build a regression model that can learn the relationship between advertising expenditure and sales and predict expected sales for a given advertising budget.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Google Colab
+
+## Dataset
+
+The dataset contains **200 records** with the following variables:
+
+| Feature | Description |
+|---------|-------------|
+| TV | Advertising expenditure on TV |
+| Radio | Advertising expenditure on Radio |
+| Newspaper | Advertising expenditure on Newspaper |
+| Sales | Product sales |
+
+## Exploratory Data Analysis
+
+The project includes visualizations for:
+
+- TV Advertising vs Sales
+- Radio Advertising vs Sales
+- Newspaper Advertising vs Sales
+- Correlation Matrix
+
+### Key Observations
+
+- TV advertising shows a clear positive relationship with sales.
+- Radio advertising also shows a positive relationship with sales.
+- Newspaper advertising has a comparatively weaker relationship with sales.
+
+## Machine Learning Model
+
+### Linear Regression
+
+Linear Regression was used to predict sales from the advertising expenditure features.
+
+The dataset was divided into:
+
+- **80% Training Data**
+- **20% Testing Data**
+
+The model was trained using 160 samples and evaluated using 40 test samples.
+
+## Model Evaluation
+
+The model was evaluated using:
+
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R² Score
+
+## Sample Prediction
+
+A new advertising budget was provided to the trained model:
+
+- TV: 150
+- Radio: 25
+- Newspaper: 20
+
+### Prediction
+
+**Predicted Sales: 14.47 units**
+
+## Conclusion
+
+A Linear Regression model was successfully developed to predict sales based on advertising expenditure.
+
+The project demonstrates a complete Machine Learning regression workflow, including data exploration, visualization, feature selection, model training, evaluation, and prediction.
+
+For the given advertising budget of TV = 150, Radio = 25, and Newspaper = 20, the model predicted approximately **14.47 units of sales**.
+
+---
+
 ## Project Structure
 
 ```text
@@ -165,5 +263,8 @@ CODSOFT_TASKS1/
 │
 ├── TASK3/
 │   └── Iris_Flower_Classification.ipynb
+│
+├── TASK4/
+│   └── Sales_Prediction.ipynb
 │
 └── README.md
