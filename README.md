@@ -1,35 +1,64 @@
-# Titanic Survival Prediction 🚢
+# CodSoft Data Science Internship Tasks
 
-## CodSoft Data Science Internship — Task 1
-
-### 📌 Project Overview
-
-This project focuses on building a Machine Learning model to predict whether a passenger on the Titanic survived or not.
-
-The project follows a complete Machine Learning workflow including data exploration, data cleaning, exploratory data analysis, preprocessing, model training, prediction, and evaluation.
+This repository contains projects completed as part of my CodSoft Data Science Internship.
 
 ---
 
-## 🎯 Objective
+# Task 1 — Titanic Survival Prediction 🚢
 
-The objective of this project is to develop a classification model that predicts passenger survival based on features such as:
+## Project Overview
 
-- Passenger Class
-- Gender
-- Age
-- Number of Siblings/Spouses
-- Number of Parents/Children
-- Fare
-- Port of Embarkation
+Built a Machine Learning model to predict whether a Titanic passenger survived or not based on passenger information.
 
-### Target Variable
+### Algorithm Used
+- Logistic Regression
 
-- `0` → Did Not Survive
-- `1` → Survived
+### Key Steps
+- Data exploration
+- Missing value handling
+- Data preprocessing
+- Exploratory Data Analysis
+- Feature encoding
+- Train-test split
+- Model training
+- Prediction
+- Model evaluation
+
+### Model Performance
+
+**Accuracy: 81.01%**
+
+The model was evaluated using:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
 
 ---
 
-## 🛠️ Technologies Used
+# Task 3 — Iris Flower Classification 🌸
+
+## Project Overview
+
+This project uses the Iris dataset to classify flowers into three species:
+
+- Setosa
+- Versicolor
+- Virginica
+
+The classification is based on four flower measurements:
+
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+
+## Objective
+
+The objective is to build a Machine Learning classification model that can identify the species of an Iris flower based on its measurements.
+
+## Technologies Used
 
 - Python
 - Pandas
@@ -38,108 +67,103 @@ The objective of this project is to develop a classification model that predicts
 - Seaborn
 - Scikit-learn
 - Google Colab
-- Jupyter Notebook
 
----
+## Dataset
 
-## 📊 Dataset
+The Iris dataset contains **150 samples** with **4 features**.
 
-The Titanic dataset contains information about individual passengers, including their age, gender, passenger class, fare, and survival status.
+Each sample belongs to one of three species:
 
-The dataset was loaded and analyzed using Pandas.
+- Setosa
+- Versicolor
+- Virginica
 
----
+## Exploratory Data Analysis
 
-## 🔍 Data Preprocessing
+The project includes visualizations such as:
 
-The following preprocessing steps were performed:
-
-1. Checked the dataset structure and statistics.
-2. Identified missing values.
-3. Removed the `Cabin` column due to a large number of missing values.
-4. Filled missing `Age` values using the median.
-5. Filled missing `Embarked` values using the most frequent value.
-6. Removed unnecessary columns:
-   - `PassengerId`
-   - `Name`
-   - `Ticket`
-7. Converted categorical variables using one-hot encoding.
-8. Split the dataset into training and testing sets using an 80:20 ratio.
-
----
-
-## 📈 Exploratory Data Analysis
-
-The following visualizations were performed:
-
-- Overall Survival Count
-- Survival by Gender
-- Survival by Passenger Class
-- Age Distribution
-- Age vs Survival
+- Species distribution
+- Sepal Length vs Sepal Width
+- Petal Length vs Petal Width
 
 ### Key Observations
 
-- Female passengers had a higher survival count compared with male passengers.
-- First-class passengers had better survival outcomes compared with third-class passengers.
-- Most passengers were concentrated around the 20–35 age range.
+- Setosa is clearly separated from the other species.
+- Versicolor and Virginica have some overlap.
+- Petal length and petal width provide strong separation between the species.
 
----
-
-## 🤖 Machine Learning Model
+## Machine Learning Model
 
 ### Logistic Regression
 
-Logistic Regression was used because Titanic survival prediction is a binary classification problem.
+Logistic Regression was used as the classification algorithm.
 
-The model was trained using 80% of the dataset and evaluated using the remaining 20%.
+The dataset was divided into:
 
----
+- **80% Training Data**
+- **20% Testing Data**
 
-## 📊 Model Performance
+The model was trained using 120 samples and evaluated using 30 test samples.
+
+## Model Performance
 
 ### Accuracy
 
-**81.01%**
+**96.67%**
 
 ### Classification Report
 
-| Class | Precision | Recall | F1-Score |
-|------|-----------|--------|----------|
-| 0 — Not Survived | 0.83 | 0.86 | 0.84 |
-| 1 — Survived | 0.79 | 0.74 | 0.76 |
-| **Overall** | **0.81** | **0.81** | **0.81** |
+| Species | Precision | Recall | F1-Score |
+|---------|-----------|--------|----------|
+| Setosa | 1.00 | 1.00 | 1.00 |
+| Versicolor | 1.00 | 0.90 | 0.95 |
+| Virginica | 0.91 | 1.00 | 0.95 |
+| **Overall** | **0.97** | **0.97** | **0.97** |
 
-### Confusion Matrix
+## Confusion Matrix
 
 The model correctly classified:
 
-- 90 passengers as Not Survived
-- 55 passengers as Survived
+- 10 Setosa flowers
+- 9 Versicolor flowers
+- 10 Virginica flowers
 
-It incorrectly classified:
+Only **1 Versicolor flower was incorrectly classified as Virginica**.
 
-- 15 passengers as Survived
-- 19 passengers as Not Survived
+Therefore:
+
+**29 out of 30 test samples were classified correctly.**
+
+## Sample Prediction
+
+A new flower was provided to the trained model with the following measurements:
+
+- Sepal Length: 5.1 cm
+- Sepal Width: 3.5 cm
+- Petal Length: 1.4 cm
+- Petal Width: 0.2 cm
+
+### Prediction
+
+**Setosa**
+
+## Conclusion
+
+The Logistic Regression model successfully classified Iris flowers into Setosa, Versicolor, and Virginica species.
+
+The model achieved an accuracy of **96.67%** on the test dataset, demonstrating strong classification performance.
 
 ---
 
-## 🔮 Sample Prediction
-
-A sample passenger was provided to the trained model for prediction.
-
-### Result
-
-**Passenger was predicted to SURVIVE.**
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
 CODSOFT_TASKS1/
 │
 ├── TASK1/
 │   └── Titanic_Survival_Prediction.ipynb
+│
+├── TASK3/
+│   └── Iris_Flower_Classification.ipynb
 │
 └── README.md
